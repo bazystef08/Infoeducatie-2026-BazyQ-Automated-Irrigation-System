@@ -1,6 +1,4 @@
-# Infoeducatie2026-BazyQ-Automated-Irrigation-System
-
-BazyQ – Automated Irrigation System
+# BazyQ – Automated Irrigation System
 
 BazyQ este un sistem inteligent și autonom de monitorizare și irigare de precizie, conceput pentru a optimiza consumul de resurse și a asigura microclimatul ideal pentru plante. Proiectat în jurul unei arhitecturi hardware robuste și integrat cu tehnologia IoT Blynk, sistemul oferă utilizatorului informații reale, oriunde în lume.
 Este un proiect simplu ca idee, dar smart ca implementare și eficient în viața cotidiană.
