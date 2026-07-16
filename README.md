@@ -1,0 +1,1 @@
+# Infoeducatie2026-BazyQ-Automated-Irrigation-System
