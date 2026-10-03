@@ -32,6 +32,7 @@ bool UseMode = false; // False - Auto ; True - Manual ;
 #define TRIG_PIN 6
 #define ECHO_PIN 7
 bool notif = false;
+int water;
 
 void WriteCentered(const char* text, int y)
 {
@@ -53,7 +54,7 @@ void SendDataToBlynk()
   Blynk.virtualWrite(V2, dht.readTemperature());
   Blynk.virtualWrite(V3, dht.readHumidity());
   Blynk.virtualWrite(V4, Soil());
-  Blynk.virtualWrite(V5, WaterLevel());
+  Blynk.virtualWrite(V5, water);
   Blynk.virtualWrite(V6, Battery());
 }
 
@@ -139,7 +140,9 @@ void loop()
   if (WiFi.status() == WL_CONNECTED) Blynk.run();
   timer.run();
 
-  if(WaterLevel() <= 5)
+  water = WaterLevel();
+
+  if(water <= 15)
   {
     digitalWrite(PUMP_PIN, LOW);
     
@@ -216,5 +219,5 @@ void loop()
     delay(50);
   }
 
-  delay(10);
+  delay(1000);
 }
